@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82481A661AF0D095006D6C5D /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82481A651AF0D095006D6C5D /* SearchResultViewController.m */; };
+		82481A691AF0D6F6006D6C5D /* CustomUISearchDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82481A681AF0D6F6006D6C5D /* CustomUISearchDisplayController.m */; };
 		82BEAEAB1AF083DC0021995E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEAEAA1AF083DC0021995E /* main.m */; };
 		82BEAEAE1AF083DC0021995E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BEAEAD1AF083DC0021995E /* AppDelegate.m */; };
 		82BEAEB61AF083DC0021995E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82BEAEB51AF083DC0021995E /* Images.xcassets */; };
@@ -26,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82481A641AF0D095006D6C5D /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		82481A651AF0D095006D6C5D /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		82481A671AF0D6F6006D6C5D /* CustomUISearchDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUISearchDisplayController.h; sourceTree = "<group>"; };
+		82481A681AF0D6F6006D6C5D /* CustomUISearchDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUISearchDisplayController.m; sourceTree = "<group>"; };
 		82BEAEA51AF083DC0021995E /* SearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82BEAEA91AF083DC0021995E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82BEAEAA1AF083DC0021995E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +92,10 @@
 				82BEAEA81AF083DC0021995E /* Supporting Files */,
 				82BEAECE1AF084850021995E /* RootViewController.h */,
 				82BEAECF1AF084850021995E /* RootViewController.m */,
+				82481A641AF0D095006D6C5D /* SearchResultViewController.h */,
+				82481A651AF0D095006D6C5D /* SearchResultViewController.m */,
+				82481A671AF0D6F6006D6C5D /* CustomUISearchDisplayController.h */,
+				82481A681AF0D6F6006D6C5D /* CustomUISearchDisplayController.m */,
 			);
 			path = SearchDemo;
 			sourceTree = "<group>";
@@ -218,6 +228,8 @@
 				82BEAEAE1AF083DC0021995E /* AppDelegate.m in Sources */,
 				82BEAEAB1AF083DC0021995E /* main.m in Sources */,
 				82BEAED01AF084850021995E /* RootViewController.m in Sources */,
+				82481A691AF0D6F6006D6C5D /* CustomUISearchDisplayController.m in Sources */,
+				82481A661AF0D095006D6C5D /* SearchResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +418,7 @@
 				82BEAECA1AF083DD0021995E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82BEAECB1AF083DD0021995E /* Build configuration list for PBXNativeTarget "SearchDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +427,7 @@
 				82BEAECD1AF083DD0021995E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

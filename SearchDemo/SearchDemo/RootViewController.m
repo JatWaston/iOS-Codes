@@ -7,13 +7,16 @@
 //
 
 #import "RootViewController.h"
+#import "SearchResultViewController.h"
+#import "CustomUISearchDisplayController.h"
 
 @interface RootViewController () <UISearchDisplayDelegate,UITableViewDataSource,UITableViewDelegate> {
-    UISearchDisplayController *_searchDisplayController;
+    CustomUISearchDisplayController *_searchDisplayController;
     UISearchBar *_searchBar;
     UITableView *_contentTableView;
     NSMutableArray *_contentArray;
     NSArray *_filterData;
+    SearchResultViewController *_searchResultController;
 }
 
 @end
@@ -39,16 +42,17 @@
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
 //    _searchBar.scopeButtonTitles = [NSArray arrayWithObjects:@"All",@"Device",@"Potable", nil]; 
     _contentTableView.tableHeaderView = _searchBar;
-//    [_contentTableView.tableHeaderView addSubview:_searchBar];
-    _searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:_searchBar contentsController:self];
+    _searchDisplayController = [[CustomUISearchDisplayController alloc] initWithSearchBar:_searchBar contentsController:self];
+    //设置搜索结果展示的委托都为self
     _searchDisplayController.searchResultsDataSource = self;
     _searchDisplayController.searchResultsDelegate = self;
-    
+    _searchDisplayController.delegate = self;
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //需要判断该tableView是界面展示的tableView还是搜索结果的tableView
     if (tableView == _contentTableView) {
         return [_contentArray count];
     } else {
@@ -79,6 +83,28 @@
 
 #pragma mark - UISearchDisplayDelegate
 
+- (void) searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller NS_DEPRECATED_IOS(3_0,8_0) {
+    _searchResultController = [[SearchResultViewController alloc] init];
+    [controller.searchContentsController addChildViewController:_searchResultController];
+    [controller.searchContentsController.view addSubview:_searchResultController.view];
+    _searchResultController.view.hidden = YES;
+    [controller.searchContentsController.view bringSubviewToFront:_searchResultController.view];
+}
 
+- (void) searchDisplayControllerDidBeginSearch:(UISearchDisplayController *)controller NS_DEPRECATED_IOS(3_0,8_0) {
+    _searchResultController.view.hidden = NO;
+}
+
+- (void) searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller NS_DEPRECATED_IOS(3_0,8_0) {
+    if (_searchResultController) {
+        [_searchResultController.view removeFromSuperview];
+        [_searchResultController removeFromParentViewController];
+        _searchResultController = nil;
+    }
+}
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller didShowSearchResultsTableView:(UITableView *)tableView NS_DEPRECATED_IOS(3_0,8_0) {
+    tableView.hidden = YES;
+}
 
 @end
