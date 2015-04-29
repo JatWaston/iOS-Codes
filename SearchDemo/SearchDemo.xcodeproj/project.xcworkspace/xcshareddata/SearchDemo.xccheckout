@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5ECF46C6-1F68-4B1B-9248-DEFC193E5A22</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SearchDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>499B9DE3DF4D00E5DFAE42B6219EF04D65DA70F3</key>
+		<string>github.com:JatWaston/PySpider.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS Codes/SearchDemo/SearchDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>499B9DE3DF4D00E5DFAE42B6219EF04D65DA70F3</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:JatWaston/PySpider.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>499B9DE3DF4D00E5DFAE42B6219EF04D65DA70F3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>499B9DE3DF4D00E5DFAE42B6219EF04D65DA70F3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Github</string>
+		</dict>
+	</array>
+</dict>
+</plist>
