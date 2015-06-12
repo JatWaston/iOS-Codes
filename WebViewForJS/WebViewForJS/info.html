@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>city</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+<script>
+function getInfo(name)
+{
+    window.location = "/getInfo/"+name;
+}
+
+function showInfo(id,info)
+{
+    $("p#"+id).html(info);
+}
+
+function clickme()
+{
+    alert('点击按钮了!');
+}
+</script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="content">
+        <h2>Divice Info</h2>
+        <div data-role="collapsible-set" data-theme="c" data-content-theme="d">
+            <div data-role="collapsible">
+                <h3 onclick="getInfo('name')">Name</h3>
+                <p id="name"></p>
+            </div>
+            <div data-role="collapsible">
+                <h3 onclick="getInfo('systemVersion')">SystemVersion</h3>
+                <p id="systemVersion"></p>
+            </div>
+            <div data-role="collapsible">
+                <h3 onclick="getInfo('imei')">IMEI</h3>
+                <p id="imei"></p>
+            </div>
+            <div data-role="collapsible">
+                <h3 onclick="getInfo('ip')">IP</h3>
+                <p id="ip"></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
